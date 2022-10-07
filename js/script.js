@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 // *** start ***
 // On first load, show home view
+  
+  
+window.onload = function () {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
@@ -87,14 +90,7 @@ $ajaxUtils.sendGetRequest(
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
-  
-    $("#navbarToggle").blur(function (event) {
-    var screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      $("#collapsable-nav").collapse('hide');
-    }
-  });
-});
+    
 
 
 // Builds HTML for the home page based on categories array
